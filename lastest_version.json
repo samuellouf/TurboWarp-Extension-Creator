@@ -1,0 +1,8 @@
+{
+  "lastest": "stable",
+  "stable": {
+    "version": "1.0",
+    "for": ["Windows", "macOS", "Linux"],
+    "bytes": ["both", "both", "64"]
+  }
+}
