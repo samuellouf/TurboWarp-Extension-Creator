@@ -45,3 +45,11 @@ async function download(version='lastest', os=if_then_else_return(getOS() == 'Wi
 }
 
 loadDownloadButton();
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const download_urlparam = urlParams.get('download');
+
+if (download_urlparam != null){
+  download();
+}
