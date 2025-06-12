@@ -5,103 +5,182 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>TurboWarp Extension Creator</title>
-    <link href="./style.css" rel="stylesheet" type="text/css" />
-    <link href="./switch.css" rel="stylesheet" type="text/css" />
+    <link href="./stylized_popups/stylized_popups.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/prism.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/navbar.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/switch.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/basic-settings.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/blocks.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/stylizedinputs.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/menus.css" rel="stylesheet" type="text/css" />
     <style class="blocks-color"></style>
   </head>
 
   <body style="background-color: white;">
-    <h1 style="font-size: 72px;" align="center">TurboWarp Extension Creator</h1>
-    <section id="configuration">
-    <section id="basic-settings" class="form">
-      
-      <p style="color: #ff0000;">Red = Required</p>
-      <div class="extension-name">
-        <p style="color: #ff0000;">Extension name:</p>
-        <table><td><tr><input type="text" placeholder="Extension name"/></tr><tr><img src="" class="validity" height="20"/></tr></td></table>
-      </div>
+    <header></header>
+    <div id="extension-manifest" class="page">
+      <section id="basic-settings" class="form">
+        <br>
+        <h1>Basic settings</h1>
+        <p class="required">Red = Required</p>
+        <form>
+          <div class="extension-name">
+            <p>Extension name:</p>
+            <table><td><tr><input type="text" placeholder="Extension name" name="ext_name" required/></tr><tr><img src="" class="validity" height="20"/></tr></td></table>
+          </div>
+          <br>
+          <div class="extension-id">
+            <p>Extension ID:</p>
+            <table><td><tr><input type="text" placeholder="Extension ID" name="ext_id" required/></tr><tr><img src="" class="validity" height="20"/></tr></td></table>
+          </div>
+          <br>
+          <div class="extension-description">
+            <p>Extension description:</p>
+            <table><td><tr><input type="text" placeholder="Extension description" name="ext_description" required/></tr><tr><img src="" class="validity" height="20" /></tr></td></table>
+          </div>
+          <br>
+          <div class="extension-creator">
+            <p>Extension creator:</p>
+            <table><td><tr><input type="text" placeholder="Extension creator" name="ext_creator"/></tr><tr><img src="" class="validity" height="20"/></tr></td></table>
+          </div>
+          <br>
+          <div class="extension-creator-account-url">
+            <p>Extension creator account URL:</p>
+            <table><td><tr><select name="ext_creator_url_prefix"><option value="https">https://</option><option value="http">http://</option></select></tr><tr><input type="text" placeholder="Extension creator account URL" name="ext_creator_url_suffix"/></tr><tr><img src="" class="validity" height="20"/></tr></td></table>
+          </div>
+          <br>
+          <br>
+          <div class="extension-color1">
+            <p>Extension color1:</p>
+            <input type="color" value="#0fbd8c" name="ext_color1"/>
+            <label class="switch">
+              <input type="checkbox" name="ext_color1_enabled" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <br>
+          <div class="extension-color2">
+            <p>Extension color2:</p>
+            <input type="color" value="#0b8e69" name="ext_color2"/>
+            <label class="switch">
+              <input type="checkbox" name="ext_color2_enabled" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <br>
+          <div class="extension-color3">
+            <p>Extension color3:</p>
+            <input type="color" value="#0c9770" name="ext_color3"/>
+            <label class="switch">
+              <input type="checkbox" name="ext_color3_enabled" checked>
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <br>
+          <div class="extension-icon">
+            <input type="file" name="icon_file" accept=".png,.jpg,.jpeg,.svg" disabled name="ext_import_icon"/>
+            <label class="switch">
+              <table><tbody><tr><td>Import file as icon</td><td style="
+          position: absolute;
+          width: 100%;
+          height: 100%;
+      "><input type="checkbox" checked name="ext_icon">
+              <span class="slider round blue side"></span></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></td><td>Use extension colors</td><td>
+                <span class="icon"></span></td></tr></tbody></table>
+            </label>
+            
+          </div>
+          <br>
+          <div class="issandboxed">
+            <p>Is extension sandboxed:</p>
+            <label class="switch">
+              <input type="checkbox" name="ext_sandboxed"/>
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <br>
+          <br>
+          <div class="submit">
+            <input type="submit" t_id="value:manifest/next" value="Next">
+          </div>
+          <br>
+        </form>
+      </section>
+    </div>
+    <div id="extension-blocks" class="page hidden">
       <br>
-      <div class="extension-id">
-        <p style="color: #ff0000;">Extension ID:</p>
-        <table><td><tr><input type="text" placeholder="Extension ID"/></tr><tr><img src="" class="validity" height="20"/></tr></td></table>
-      </div>
-      <br>
-      <div class="extension-description">
-        <p style="color: #ff0000;">Extension description:</p>
-        <table><td><tr><input type="text" placeholder="Extension description"/></tr><tr><img src="" class="validity" height="20" /></tr></td></table>
-      </div>
-      <br>
-      <div class="extension-creator">
-        <p>Extension creator:</p>
-        <table><td><tr><input type="text" placeholder="Extension creator"/></tr><tr><img src="" class="validity" height="20"/></tr></td></table>
-      </div>
-      <br>
-      <div class="extension-creator-account-url">
-        <p>Extension creator account URL:</p>
-        <table><td><tr><select><option value="https">https://</option><option value="http">http://</option></select></tr><tr><input type="text" placeholder="Extension creator account URL"/></tr><tr><img src="" class="validity" height="20"/></tr></td></table>
-      </div>
-      <br>
-      <div class="extension-file-name">
-        <p style="color: #ff0000;">Extension file name:</p>
-        <table><td><tr><input type="text" placeholder="Extension file name"/>.js</tr><tr><img src="" class="validity" height="20" /></tr></td></table>
-      </div>
-      <br>
-      <br>
-      <div class="extension-color1">
-        <p>Extension color1:</p>
-        <input type="color" value="#0fbd8c" disabled/>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
-      </div>
-      <br>
-      <div class="extension-color2">
-        <p>Extension color2:</p>
-        <input type="color" value="#0b8e69" disabled/>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
-      </div>
-      <br>
-      <div class="extension-color3">
-        <p>Extension color3:</p>
-        <input type="color" value="#0c9770" disabled/>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
-      </div>
-      <br>
-      <div class="extension-icon">
-        <input type="file" name="icon" accept=".png,.jpg,.jpeg,.svg" />
-        <label class="switch">
-          <table><tbody><tr><td>Import file as icon</td><td style="
-      position: absolute;
-      width: 100%;
-      height: 100%;
-  "><input type="checkbox">
-          <span class="slider round blue side"></span></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></td><td>Use extension colors</td><td>
-  <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.13275" height="38.13275" viewBox="0,0,38.13275,38.13275"><g transform="translate(-220.93362,-160.93362)"><g data-paper-data="{&quot;isPaintingLayer&quot;:true}" fill="#0fbd8c" fill-rule="nonzero" stroke="#0b8e69" stroke-width="2.5" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" style="mix-blend-mode: normal"><path d="M257.81638,179.99869c0,9.83892 -7.97878,17.81769 -17.81769,17.81769c-9.83892,0 -17.81506,-7.97878 -17.81506,-17.81769c0,-9.83892 7.97614,-17.81506 17.81506,-17.81506c9.83892,0 17.81769,7.97878 17.81769,17.81506z"/></g></g></svg><!--rotationCenter:19.066374999999994:19.066374999999994--></td></tr></tbody></table>
-        </label>
-        
-      </div>
-      <br>
-      <div class="issandboxed">
-        <p>Is extension sandboxed:</p>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
-      </div>
-    </section>
-    <br>
-    <section id="blocks">
+      <section id="blocks">
+        <div class="menus-list">
+          <div class="menu">
+            <a href="javascript: hideMenusMenu();" class="close"></a>
+            <br><br>
+            <h1>Create/edit/remove a menu</h1>
+            <br>
+            <select class="menusList"></select>
+            <br>
+            <br>
+            <div class="addMenu">
+              <input type="text"><button onclick="addMenu();">Add menu</button>
+            </div>
+            <br>
+            <div class="menuContent">
+            </div>
+            <br>
+            <button onclick="addMenuItem({text: '', value: ''});">Add an item</button>
+          </div>
+          <div class="centered">
+            <div class="button" onclick="showMenusMenu();">
+              <div class="fakeblock">
+                <select><option>option</option></select>
+              </div>
+              <h3 align="center">Create/edit/remove menus</h3>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="add-block">
+          <div class="menu">
+            <a href="javascript: hideCreateBlockMenu();" class="close"></a>
+            <br><br>
+            <h1>Create a block</h1>
+            <div class="form">
+              <h1 style="font-size: 24px;">Block type:</h1>
+              <select title="Block Type">
+                <option value="label">Label</option>
+                <option value="command">Command</option>
+                <option value="reporter">Reporter</option>
+                <option value="boolean">Boolean</option>
+                <!--<option value="button">Button</option>-->
+              </select>
+              <br>
+              <br>
+              <button align="center" onclick="createBlock();">Create block</button>
+            </div>
+          </div>
+          <div class="centered">
+            <div class="button" onclick="showCreateBlockMenu();">
+              <svg version="1.1" width="170" height="58" viewBox="0 0 170 58" class="scratchblocks-style-scratch3"><g style="transform: scale(1)"><g transform="translate(0 0)"><g transform="translate(2 1)"><path class="sb3-" d="M 0 4
+            A 4 4 0 0 1 4 0
+            H 12 c 2 0 3 1 4 2
+            l 4 4
+            c 1 1 2 2 4 2
+            h 12
+            c 2 0 3 -1 4 -2
+            l 4 -4
+            c 1 -1 2 -2 4 -2
+            L 86 0
+            a 4 4 0 0 1 4 4 L 90 44 a 4 4 0 0 1 -4 4 L 48 48 c -2 0 -3 1 -4 2 l -4 4 c -1 1 -2 2 -4 2 h -12 c -2 0 -3 -1 -4 -2 l -4 -4 c -1 -1 -2 -2 -4 -2 L 4 48 a 4 4 0 0 1 -4 -4 Z" fill="#a49a3a" stroke="rgba(0, 0, 0, 0.2)"></path><text class="sb3-label sb3-" x="0" y="13" transform="translate(8 17)">new block</text></g></g></g></svg>
+              <br>
+              <h3 align="center">Create a new block</h3>
+            </div>
+          </div>
+        </div>
+        <br>
         <div class="blocks_spawnzone">
           <div class="blocks">
           </div>
-          <br><br><br>
+          <br>
           <div class="edit-proprieties">
             <div class="add-input">
               <p>Add a 
@@ -119,132 +198,90 @@
               <button onclick="">Add some text</button>
             </div>
             <br>
-            <div class="change-text">
-              Text: <input type="text">
-              <button onclick="">Set text</button>
-            </div>
-            <br>
             <div class="change-block-opcode">
-              Set block opcode to: <input type="text">
-              <button onclick="">Set opcode</button>
+              Opcode: <input type="text">
             </div>
             <br>
             <div class="change-argument-name">
-              Set argument name: <input type="text">
-              <button onclick="">Set argument name</button>
+              Argument name: <input type="text">
             </div>
             <br>
             <div class="change-input-option">
               <input type="checkbox" class="menuacceptreporters"/>This menu accepts reporters<br>
-              Set menu name: <input type="text" class="setmenuname">
-              <button class="setmenuname">Set menu name</button>
+              Menu: <select class="menuName"></select>
               <br>
-              <select title="SelectOption">
-                <option value="a">A</option>
-                <option value="b">B</option>
-              </select>
-              Selected option : <span class="option"></span> (<span class="value"></span>)
-              <br>
-              <button class="delete">Delete option</button>
-              Or
-              <p>Option: <input type="text" class="option"/></p>
-              <p>Value: <input type="text" class="value"/></p>
-              <button class="new">New option</button>
             </div>
-            <p>To change an input's default value, type/select the value of your choice directly in the input.</p>
             <div class="delete">
               <button class="deletebutton">Delete</button>
             </div>
+            <br>
             <div class="deleteblock">
               <button class="deleteblockbutton">Delete the full block</button>
             </div>
-          </div>
-        </div>
-        <div class="add-block">
-          <div class="menu">
-            <a href="javascript: hideCreateBlockMenu();" class="close"></a>
-            <br><br>
-            <h1>Create a block</h1>
-            <div class="form">
-              <h1 style="font-size: 24px;">Block type:</h1>
-              <select title="BlockType">
-                <option value="label">Label</option>
-                <option value="command">Command</option>
-                <option value="reporter">Reporter</option>
-                <option value="boolean">Boolean</option>
-                <!--<option value="button">Button</option>-->
-              </select>
-              <br>
-              <button class="buttonstylized" align="center" onclick="createBlock();">Create block</button>
-            </div>
-          </div>
-          <div class="centered">
-            <div class="button" onclick="showCreateBlockMenu();">
-              <svg version="1.1" width="170" height="58" viewBox="0 0 170 58" class="scratchblocks-style-scratch3"><g style="transform: scale(1)"><g transform="translate(0 0)"><g transform="translate(2 1)"><path class="sb3-" d="M 0 4
-          A 4 4 0 0 1 4 0
-          H 12 c 2 0 3 1 4 2
-          l 4 4
-          c 1 1 2 2 4 2
-          h 12
-          c 2 0 3 -1 4 -2
-          l 4 -4
-          c 1 -1 2 -2 4 -2
-          L 86 0
-          a 4 4 0 0 1 4 4 L 90 44 a 4 4 0 0 1 -4 4 L 48 48 c -2 0 -3 1 -4 2 l -4 4 c -1 1 -2 2 -4 2 h -12 c -2 0 -3 -1 -4 -2 l -4 -4 c -1 -1 -2 -2 -4 -2 L 4 48 a 4 4 0 0 1 -4 -4 Z" fill="#a49a3a" stroke="rgba(0, 0, 0, 0.2)"></path><text class="sb3-label sb3-" x="0" y="13" transform="translate(8 17)">new block</text></g></g></g></svg>
-              <br>
-              <h3 align="center">Create a new block</h3>
-            </div>
+            <br>
+            <p>To change an input's default value, type/select the value of your choice directly in the input.</p>
           </div>
         </div>
       </section>
-      <br>
       <section id="code">
         <p class="selectblock">Select a block</p>
         <div>
           <p>[<input type="checkbox"/>Async] <span class="opcode"></span>(args<input type="text" placeholder=", util..." class="otherarguments"/>){<br>
-            <textarea placeholder="Type your block's code here"></textarea>
+            <textarea class="prism-live language-js" placeholder="Type your block's code here"></textarea>
           <br>}</p>
         </div>
-        <button>Save</button>
       </section>
       <br>
+      <div class="previous-next">
+        <button t_id="manifest/previous" onclick="openPage('extension-manifest');">Previous</button>
+        <div class="spacer"></div>
+        <button t_id="manifest/next" onclick="openPage('extension-exportation');">Next</button>
+      </div>
+      <br>
+    </div>
+    <div id="extension-exportation" class="page hidden">
       <section id="result">
-        <button onclick="loadCode();" class="buttonstylized">Load Code</button>
-        <h1 style="font-size: 48px; color: red;" class="errortext" align="center"><b></b></h1>
-        <div id="extension-file-name" style="background-color: gray;font-weight: bold;"></div>
-        <pre><button class="buttonstylized" title="Copy" onclick="copyExtensionCode();">📋</button><button class="buttonstylized" title="Download Code" onclick="downloadCode();"><img src="./download.svg" height="32"></button>
-          <code id="extension-code-spawnzone" style="background-color: #dddddd; display: block;"></code>
+        <br>
+        <pre>
+          <button title="Copy" onclick="copyExtensionCode();">📋</button><button title="Download Code" onclick="downloadCode();"><img src="./images/download.svg" height="16"></button>
+          <br>
+          <pre><code class="language-javascript">// Your extension's code will appear here</code></pre>
         </pre>
+        <br>
+        <div class="previous-next">
+          <button t_id="manifest/previous" onclick="openPage('extension-blocks');">Previous</button>
+        </div>
+        <br>
       </section>
-    </section>
-    
+    </div>
+    <a href="https://github.com/samuellouf/TurboWarp-Extension-Creator/" class="githubBTN" title="See on GitHub">
+      <img src="./images/github-mark-white.svg">
+    </a>
     <footer>
+      <br>
       <p>TurboWarp Extension Creator is not affiliated with TurboWarp.</p>
-      <p>By @samuellouf - (on <a href="https://scratch.mit.edu/users/samuellouf/">Scratch</a>, <a href="https://github.com/samuellouf/">GitHub</a> and the <a href="https://poppy-playtime.fandom.com/wiki/User:SamuelLouf">Poppy Playtime Wiki</a>)</p>
+      <p>By @samuellouf - (on <a href="https://scratch.mit.edu/users/samuellouf/">Scratch</a>, <a href="https://github.com/samuellouf/">GitHub</a>)</p>
+      <p><a href="https://samuellouf.github.io/">See my website</a></p>
       <p>Any problems? Report them <a href="https://github.com/samuellouf/TurboWarp-Extension-Creator/issues">here</a>.</p>
-      <div class="links"><a href="https://github.com/samuellouf/TurboWarp-Extension-Creator/">GitHub</a></div>
+      <hr>
+      <div class="links"><a href="https://github.com/samuellouf/TurboWarp-Extension-Creator/">See the <i>source code</i> on GitHub</a></div>
+      <br><br>
     </footer>
 
-    <script src="./script.js"></script>
-    <script src="./basic-settings.js"></script>
-    <script src="./create-blocks.js"></script>
-    <script src="./add-blocks-input.js"></script>
-    <script src="./add-blocks-text.js"></script>
-    <script src="./edit-blocks-text.js"></script>
-    <script src="./edit-blocks-input.js"></script>
-    <script src="./edit-blocks-opcode.js"></script>
-    <script src="./edit-blocks-opcode-function.js"></script>
-    <script src="./edit-block-menu.js"></script>
-    <script src="./delete-blocks.js"></script>
-    <script src="./create-code.js"></script>
-    <script src="./save-code.js"></script>
-    <script>
-      window.addEventListener("load", () => {
-        if ("serviceWorker" in navigator){
-          navigator.serviceWorker.register("service-worker.js");
-        }
-      });
-    </script>
+    <script src="./scripts/lodash.min.js"></script>
+    <script src="./stylized_popups/stylized_popups.js"></script>
+    <script src="./scripts/prism.js"></script>
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/scratch.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/pages.js"></script>
+    <script src="./scripts/basic-settings.js"></script>
+    <script src="./scripts/blocks.js"></script>
+    <script src="./scripts/blocksContent.js"></script>
+    <script src="./scripts/menus.js"></script>
+    <script src="./scripts/exportCode.js"></script>
+    <script src="./scripts/navbar-config.js"></script>
   </body>
 
 </html>

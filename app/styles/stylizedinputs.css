@@ -1,0 +1,32 @@
+:not(.block) > button,:not(.block) > input[type=submit]{
+  border: 1px solid #777777;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  background-image: linear-gradient(to top, #bcbcbc, #cccccc 33%);
+}
+
+:not(.block) > select, :not(.block) > input:not([type=submit]):not([type=color]){
+  align-items: center;
+  border: 1px solid #777777;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  width: fit-content;
+  &:not(.select--multiple)::after {
+    content: "";
+    justify-self: end;
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+}
+
+:not(.block) > input[type=color]{
+  border: 1px solid #777777;
+  border-radius: 0.25em;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #d5d5d5, buttonface 33%);
+}

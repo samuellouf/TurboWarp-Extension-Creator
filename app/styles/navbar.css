@@ -1,0 +1,104 @@
+.navbar{
+  background: #d3d3d3;
+  background: var(--navbar-background);
+  width: 100%;
+  color: #000000;
+  color: var(--navbar-color);
+  font-size: var(--navbar-font-size);
+}
+
+.navbar.top{
+  top: 0;
+}
+
+.navbar.bottom{
+  bottom: 0;
+}
+
+.navbar.left{
+  left: 0;
+}
+
+.navbar.right{
+  right: 0;
+}
+
+.navbar a{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.navbar ul{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li:not(.separator){
+  cursor: pointer;
+  padding: 5px;
+  min-width: 30px;
+}
+
+.navbar ul li img{
+  height: var(--navbar-font-size);
+}
+
+.navbar ul li:hover{
+  background: #aeaeae;
+  background: var(--navbar-hovered-backgroud);
+}
+
+.navbar ul li:hover > span{
+  font-weight: bold;
+}
+
+.navbar ul li:not(:hover) ul{
+  display: none;
+}
+
+.navbar ul li ul{
+  display: block;
+  position: absolute;
+  background: #909090;
+  background: var(--navbar-submenu-background);
+  transform: translate(-5px, 5px);
+  border: #d3d3d3 2px solid;
+  border: var(--navbar-background) 2px solid;
+}
+
+.navbar ul li ul li{
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.navbar ul li.separator{
+  background: #909090;
+  background: var(--navbar-submenu-background);
+  width: 2px;
+}
+
+.navbar ul li ul li.separator{
+  background: #d3d3d3;
+  background: var(--navbar-background);
+  padding: 1px;
+  width: auto;
+  margin: 0;
+}
+
+.navbar ul li ul li ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(0px, 29px);
+  z-index: 1000;
+  width: max-content;
+}
+
+.navbar ul li ul li:has(ul)::after{
+  position: relative;
+  left: 20px;
+  content: '❯';
+  float: right;
+}

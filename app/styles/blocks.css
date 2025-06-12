@@ -1,0 +1,80 @@
+.block:not([type=label]){
+  background-color: var(--color1);
+  border: var(--color2) solid 2px;
+  margin: 2px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.block{
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  min-height: 30px;
+}
+
+.block[type=command]{
+  border-radius: 10px;
+}
+
+.block[type=reporter]{
+  border-radius: 100px;
+}
+
+.block[type=boolean], .block .boolean{
+  --mask: conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) left/51% 60.00px repeat-y, conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) right/51% 60.00px repeat-y;
+  mask: var(--mask);
+  -webkit-mask: var(--mask);
+  -moz-mask: var(--mask);
+}
+
+.block[type=button]{
+  background-color: #F9F9F9;
+  border: 2px solid #e6e6e6;
+  border-radius: 5px;
+}
+
+.block span, .block div, .block input, .block select{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.block input, .block select{
+  border-radius: 100px;
+  border: none;
+  font-family: inherit;
+}
+
+.block input[acceptreporters=true], .block select[acceptreporters=true]{
+  border-radius: 10px;
+}
+
+.block input[type="text"], input[type="number"]{
+  width: 50px;
+  height: 20px;
+}
+
+.block .boolean{
+  width: 50px;
+  height: 20px;
+  background-color: var(--color3);
+}
+
+.block select{
+  background-color: var(--color3);
+}
+
+.block select:not([acceptreporters="true"]){
+  border-radius: 4px;
+}
+
+.block select:focus{
+  outline: none;
+}
+
+.block span[type="text"][contenteditable]{
+  min-width: 10px;
+  border: var(--color2) solid 1px;
+}

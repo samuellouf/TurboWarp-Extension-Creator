@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Close</title>
+  <style>
+ h1.typewriter,  p.typewriter {
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing .5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+  </style>
+</head>
+<body>
+  <script>
+    const delay = (ms) => new Promise((resolve) => {setTimeout(resolve, ms)});
+
+    function serverClosed(){
+      const fetchJSON = async () => {
+        try {
+          var r = await fetch("../isServerOpened").then((r) => r.json());
+          return r;
+        } catch(e){
+          return false;
+        }
+      }
+
+      return new Promise(async (resolve) => {
+        var open = true;
+        while (open){
+          await delay(1000);
+          if (!(await fetchJSON() == true)){
+            open = false;
+          }
+        }
+
+        resolve();
+      });
+    }
+
+    async function load(){
+      if (window.location.hostname == "localhost"){
+        const h1 = document.createElement("h1");
+        document.body.appendChild(h1);
+        h1.innerText = "Closing the server...";
+        h1.classList.add("typewriter");
+        const p = document.createElement("p");
+        document.body.appendChild(p);
+        p.innerText = "The server is now closing...";
+        p.classList.add("typewriter");
+        await serverClosed();
+        p.classList.remove("typewriter");
+        p.classList.add("typewriter");
+        p.innerText = "The server is closed!";
+      } else {
+        const h1 = document.createElement("h1");
+        document.body.appendChild(h1);
+        h1.innerText = "Closing the server...";
+        h1.classList.add("typewriter");
+        await delay(2000);
+        h1.classList.remove("typewriter");
+        h1.innerText = "Closing the server... ??";
+        h1.classList.add("typewriter");
+        await delay(1000);
+        const p = document.createElement("p");
+        document.body.appendChild(p);
+        p.innerText = "This is not a server";
+        p.classList.add("typewriter");
+      }
+    }
+
+    load();
+  </script>
+</body>
+</html>
