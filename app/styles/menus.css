@@ -1,0 +1,81 @@
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+#blocks .add-block .centered, #blocks .menus-list .centered {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+#blocks .add-block > div , #blocks .menus-list > div {
+  border-radius: 10px;
+  background-color: #a3edff;
+  border: #a3edff solid 10px;
+  cursor: pointer;
+}
+
+#blocks .add-block .menu, #blocks .menus-list .menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  text-align: center;
+  margin: 20px;
+  border: #a3edff solid 20px;
+}
+
+#blocks .add-block .menu h1, #blocks .menus-list .menu h1 {
+  font-size: 32px;
+}
+
+.menus-list .centered select{
+  pointer-events: none;
+}
+
+.menus-list .menuContent{
+  max-height: 150px;
+  overflow: auto;
+}
+
+.menus-list .menuContent .container{
+  display: flex;
+  align-items: center;
+}
+
+.menus-list .menuContent .container button{
+  background: transparent;
+  border: none;
+}
+
+.menus-list .menuContent .container .move-buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+.menus-list .menuContent .container .item-container{
+  display: flex;
+}

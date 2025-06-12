@@ -1,0 +1,36 @@
+{
+  "name": "turbowarp-extension-creator",
+  "version": "2.0.0",
+  "description": "Use TurboWarp Extension Creator to easily code TurboWarp extensions.",
+  "keywords": [
+    "TurboWarp",
+    "Extension",
+    "Creator",
+    "TurboWarpExtenisonCreator"
+  ],
+  "homepage": "https://samuellouf.github.io/TurboWarp-Extension-Creator/",
+  "bugs": {
+    "url": "https://github.com/samuellouf/TurboWarp-Extension-Creator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuellouf/TurboWarp-Extension-Creator.git"
+  },
+  "license": "MIT",
+  "author": "SamuelLouf",
+  "type": "commonjs",
+  "scripts": {
+    "serve": "node ./server/server.js --full",
+    "serve-app": "node ./server/server.js --app",
+    "serve-website": "node ./server/server.js --website",
+    "build": "node ./server/build-static.js --full",
+    "build-app": "node ./server/build-static.js --app",
+    "build-website": "node ./server/build-static.js --website",
+    "dev": "node ./server/server.js --full --dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

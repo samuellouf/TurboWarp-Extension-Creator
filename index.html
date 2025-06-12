@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TurboWarp Extension Creator</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="./favicon.svg" />
+    <!--Styles-->
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <link rel="stylesheet" href="./styles/header.css"/>
+    <link rel="stylesheet" href="./styles/stylizedinputs.css"/>
+    <meta name="theme-color" content="#ff4d4d" />
+  </head>
+  <body>
+    <section id="home">
+      <br>
+      <div class="presentation">
+        <div class="text">
+          <p>Use TurboWarp Extension Creator to easily code TurboWarp extensions.</p>
+          <a href="./app/"><button class="stylizedbutton" style="color: black; background-color: white;"><img src="./images/tryit.svg" width="16">&nbsp;&nbsp;Try it</button></a>
+        </div>
+        <div class="snapshot">
+          <img src="./images/snapshot.png" width="800"/>
+        </div>
+      </div>
+      <section id="links" class="centeritems">
+        <a href="https://github.com/samuellouf/TurboWarp-Extension-Creator"><button class="stylizedbutton">See on GitHub</button></a>
+        <a href="#download" onclick="setActive('download');"><button class="stylizedbutton">Download</button></a>
+      </section>
+    </section>
+    <header class="topnav">
+      <a href="#home" onclick="setActive('home');">Home</a>
+      <a href="#about" onclick="setActive('about');">About</a>
+      <a href="#download" onclick="setActive('download');">Download</a>
+      <a href="#lastestversionlog" onclick="setActive('lastestversionlog');">Lastest version log</a>
+      <a href="#bugs" onclick="setActive('bugs');">Bugs and issues</a>
+    </header>
+    <section id="page">
+      <section id="about">
+        <br>
+        <h1 class="title">About "TurboWarp Extension Creator"</h1>
+        <br>
+        <p class="aboutparagraph">TurboWarp Extension Creator is free, can be downloaded and used offline.</p>
+        <p class="aboutparagraph">TurboWarp Extension Creator is not affiliated with TurboWarp.</p>
+        <p class="aboutparagraph">TurboWarp Extension Creator is an open-source project (registered under the MIT License).</p>
+        <br>
+      </section>
+      <section id="download">
+        <br>
+        <h1 class="title">Download</h1>
+        <br>
+        <div class="bigdownloadbutton">
+          <a href="https://github.com/samuellouf/TurboWarp-Extension-Creator/releases" class="downloadbutton"><button class="stylizedbutton" style="background-color: #505050; outline-color: #707070; font-size: 2em;">See the releases</button></a>
+        </div>
+        <br>
+      </section>
+      <section id="lastestversionlog">
+        <br>
+        <h1 class="title">Version Log</h1>
+        <br>
+        <div class="log">
+          <ul>
+            <li>Updated the UI</li>
+            <li>Renewed the code</li>
+          </ul>
+        </div>
+        <br>
+      </section>
+      <section id="bugs">
+        <br>
+        <h1 class="title">Bugs and issues</h1>
+        <br>
+        <p>If you have found any bug or issue in TurboWarp Extension Creator, please report it in issues.</p>
+        <div class="centeritems">
+          <a href="https://github.com/samuellouf/TurboWarp-Extension-Creator/issues/new?labels=bug&title=New+bug+report&assignees=samuellouf"><button class="stylizedbutton" style="background-color: #30a14e; outline-color: #3fc257; font-size: 1.5em;">Report a bug</button></a>
+        </div>
+        <br>
+      </section>
+      <a href="https://github.com/samuellouf/TurboWarp-Extension-Creator/" class="githubBTN" title="See on GitHub">
+        <img src="./images/github-mark-white.svg">
+      </a>
+      <footer>
+        <br>
+        <p>TurboWarp Extension Creator is not affiliated with TurboWarp.</p>
+        <p>By @samuellouf - (on <a href="https://scratch.mit.edu/users/samuellouf/">Scratch</a>, <a href="https://github.com/samuellouf/">GitHub</a>)</p>
+        <p><a href="https://samuellouf.github.io/">See my website</a></p>
+        <p>Any problems? Report them <a href="https://github.com/samuellouf/TurboWarp-Extension-Creator/issues">here</a>.</p>
+        <hr>
+        <div class="links"><a href="https://github.com/samuellouf/TurboWarp-Extension-Creator/">See the <i>source code</i> on GitHub</a></div>
+        <br><br>
+      </footer>
+    </section>
+    <!--Scripts-->
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/header.js"></script>
+  </body>
+</html>
