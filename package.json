@@ -8,7 +8,7 @@
     "Creator",
     "TurboWarpExtenisonCreator"
   ],
-  "homepage": "https://github.com/samuellouf/TurboWarp-Extension-Creator#readme",
+  "homepage": "https://samuellouf.github.io/TurboWarp-Extension-Creator/",
   "bugs": {
     "url": "https://github.com/samuellouf/TurboWarp-Extension-Creator/issues"
   },
@@ -18,7 +18,7 @@
   },
   "license": "MIT",
   "author": "SamuelLouf",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "serve": "node ./server/server.js --full",
     "serve-app": "node ./server/server.js --app",
@@ -26,6 +26,11 @@
     "build": "node ./server/build-static.js --full",
     "build-app": "node ./server/build-static.js --app",
     "build-website": "node ./server/build-static.js --website",
-    "dev": "node ./server/server.js --full --dev"
+    "dev": "node ./server/server.js --full --dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
