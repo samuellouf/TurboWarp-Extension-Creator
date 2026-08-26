@@ -1,6 +1,6 @@
 {
   "name": "turbowarp-extension-creator",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Use TurboWarp Extension Creator to easily code TurboWarp extensions.",
   "keywords": [
     "TurboWarp",
@@ -20,13 +20,6 @@
   "author": "SamuelLouf",
   "type": "commonjs",
   "scripts": {
-    "serve": "node ./server/server.js --full",
-    "serve-app": "node ./server/server.js --app",
-    "serve-website": "node ./server/server.js --website",
-    "build": "node ./server/build-static.js --full",
-    "build-app": "node ./server/build-static.js --app",
-    "build-website": "node ./server/build-static.js --website",
-    "dev": "node ./server/server.js --full --dev",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
