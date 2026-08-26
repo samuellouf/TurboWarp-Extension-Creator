@@ -1,58 +1,70 @@
-# TurboWarp Extension Creator
-An HTML/CSS/JS app to easily create extensions for TurboWarp.
+# Getting Started with Create React App
 
-TurboWarp Extension Creator is not affiliated with TurboWarp.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Versions
- - Version 1.0.0 : initial commit
- - Version 2.0.0 : Added NPM server among other things
+## Available Scripts
 
-## Usage
-### Online
-To use TurboWarp Extension Creator online, just open [https://samuellouf.github.io/TurboWarp-Extension-Creator/app](https://samuellouf.github.io/TurboWarp-Extension-Creator/app) or [https://samuellouf.itch.io/turbowarp-extension-creator](https://samuellouf.itch.io/turbowarp-extension-creator).
+In the project directory, you can run:
 
-## Offline
-### With Node.js
-#### Installing Node.js
-Go to [https://nodejs.org/en/download](https://nodejs.org/en/download) and download Node.js then install Node.js.
-#### Downloading and opening
-Download the TurboWarp Extension Creator binaries from [https://github.com/samuellouf/TurboWarp-Extension-Creator/releases](https://github.com/samuellouf/TurboWarp-Extension-Creator/releases) (download the `Source code` file).
-Decompress the zip file and open the decompressed folder.
-#### Running the scripts
-|                    |  Build                               | Serve                                |
-| ------------ | --------------------------- | --------------------------- |
-| Full             | `npm run build`               | `npm run serve`                |
-| App            | `npm run build-app`       | `npm run serve-app`         |
-| Website      | `npm run build-website` | `npm run serve-website`  |
+### `npm start`
 
-##### Build
-If you choose to build the website, you then need to open `build/index.html`.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-##### Serve
-If you choose to serve the website, some text will appear in the console.
-```sh
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-> turbowarp-extension-creator@2.0.0 serve
-> node ./server/server.js [--full/--app/--website]
+### `npm test`
 
-[XX:XX:XX] Building... done in XXXms
-Server is ready on http://localhost:[XXXX]/
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```
+### `npm run build`
 
-`[--full/--app/--website]` depends on the command you ran.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-`[XX:XX:XX]` is the time the server was built (in the HH:MM:SS format).
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-`[XXXX]` is the localhost port (usually 4000).
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Open `http://localhost:XXXX/` in your web browser.
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Without Node.js
-#### Downloading and opening
-Download the TurboWarp Extension Creator binaries from [https://github.com/samuellouf/TurboWarp-Extension-Creator/releases](https://github.com/samuellouf/TurboWarp-Extension-Creator/releases) (download the `build.zip` or `build.tar.gz` file).
-Decompress the zip file and open the decompressed folder.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Open `index.html` in your web browser.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
