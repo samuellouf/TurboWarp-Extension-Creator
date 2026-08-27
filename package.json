@@ -8,7 +8,7 @@
     "Creator",
     "TurboWarpExtenisonCreator"
   ],
-  "homepage": "https://samuellouf.github.io/turbowarp-extension-creator/",
+  "homepage": "https://samuellouf.github.io/TurboWarp-Extension-Creator/",
   "bugs": {
     "url": "https://github.com/samuellouf/turbowarp-extension-creator/issues"
   },
@@ -26,13 +26,13 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
