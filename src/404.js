@@ -1,8 +1,8 @@
 import four_o_four from './404.svg';
-import './404.css';
-import './website/styles/style.css';
 
 function NotFound() {
+  import('./404.css');
+  import('./website/styles/style.css');
   return (
     <>
       <h1>Error 404</h1>

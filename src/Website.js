@@ -1,6 +1,4 @@
 import { useRef } from 'react';
-import './website/styles/style.css';
-import './website/styles/header.css';
 import snapshot from './website/images/snapshot.png';
 import tryit from './website/images/tryit.svg';
 import github_logo from './website/images/github-mark-white.svg';
@@ -133,6 +131,8 @@ function Page(){
 }
 
 function Website() {
+  import('./website/styles/style.css');
+  import('./website/styles/header.css');
   return (
     <div className="App">
       <Home />

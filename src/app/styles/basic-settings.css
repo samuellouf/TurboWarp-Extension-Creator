@@ -1,0 +1,21 @@
+#basic-settings .required{
+  color: red;
+}
+
+#basic-settings .icon{
+  display: block;
+  background-color: var(--color2);
+  width: 42px;
+  height: 42px;
+  border: var(--color1) solid 5px;
+  border-radius: 50%;
+}
+
+form div p:has(+ input:required){
+  color: red;
+}
+
+#basic-settings .submit{
+  display: flex;
+  justify-content: flex-end;
+}
